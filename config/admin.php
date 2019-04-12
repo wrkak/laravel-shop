@@ -133,7 +133,7 @@ return [
 
         // Disk in `config/filesystem.php`.
         // 对应 filesystem.php 中的 disks
-        'disk' => 'admin',
+        'disk' => 'public',
 
         // Image and file upload path under the disk above.
         'directory' => [
