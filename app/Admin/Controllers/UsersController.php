@@ -29,23 +29,6 @@ class UsersController extends Controller
     }
 
     /**
-     * Show interface.
-     *
-     * @param mixed   $id
-     * @param Content $content
-     * @return Content
-     */
-    public function show($id, Content $content)
-    {
-        return $content
-            ->header('Detail')
-            ->description('description')
-            ->body($this->detail($id));
-    }
-
-
-
-    /**
      * Make a grid builder.
      *
      * @return Grid
@@ -92,28 +75,4 @@ class UsersController extends Controller
 
         return $grid;
     }
-
-    /**
-     * Make a show builder.
-     *
-     * @param mixed   $id
-     * @return Show
-     */
-    protected function detail($id)
-    {
-        $show = new Show(User::findOrFail($id));
-
-        $show->id('Id');
-        $show->name('Name');
-        $show->email('Email');
-        $show->password('Password');
-        $show->remember_token('Remember token');
-        $show->email_verified('Email verified');
-        $show->created_at('Created at');
-        $show->updated_at('Updated at');
-
-        return $show;
-    }
-
-
 }
