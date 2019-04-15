@@ -14,8 +14,8 @@ return [
         'app_id'      => env('WECHAT_APP_ID',''),
         'mch_id'      => env('WECHAT_MCH_ID',''),
         'key'         => env('WECHAT_KEY',''),
-        'cert_client' => env('WECHAT_CERT_CLIENT',''),
-        'cert_key'    => env('WECHAT_CERT_KEY',''),
+        'cert_client' => resource_path('wechat_pay/apiclient_cert.pem'),
+        'cert_key'    => resource_path('wechat_pay/apiclient_key.pem'),
         'log'         => [
             'file' => storage_path('logs/wechat_pay.log'),
         ],
