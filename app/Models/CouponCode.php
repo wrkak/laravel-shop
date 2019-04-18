@@ -94,7 +94,7 @@ class CouponCode extends Model
                         ->where('closed', false);
                 })->orWhere(function($query) {
                     $query->whereNotNull('paid_at')
-                        ->where('refund_status', Order::REFUND_STATUS_PENDING);
+                        ->where('refund_status','!=', Order::REFUND_STATUS_SUCCESS);
                 });
             })
             ->exists();
